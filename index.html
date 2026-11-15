@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ishi's Brownies | Homemade Brownies, Cheesecakes & Custom Chocolates in Bangalore</title>
+<meta name="description" content="Fudgy homemade brownies, brownie slabs with your message, cheesecakes, cake bowls, name chocolates and gift hampers. Baked to order in Bangalore. Egg & eggless.">
+<meta property="og:title" content="Ishi's Brownies | Homemade in Bangalore">
+<meta property="og:description" content="Brownies, cheesecakes, custom chocolates & hampers, baked to order in Bangalore.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?auto=format&amp;fit=crop&amp;w=900&amp;q=75">
+<meta name="theme-color" content="#2b1a12">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"Ishi's Brownies","image":"https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?auto=format&amp;fit=crop&amp;w=900&amp;q=75","address":{"@type":"PostalAddress","addressLocality":"Bangalore","addressRegion":"Karnataka","addressCountry":"IN"},"telephone":"+91-9663819849","servesCuisine":"Desserts","priceRange":"₹₹","paymentAccepted":"UPI, Cash, Card"}</script>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<script>document.documentElement.classList.add("gl-pending");setTimeout(function(){document.documentElement.classList.remove("gl-pending")},9000)</script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="polish.css">
+</head>
+<body>
+
+<div class="topbar"><div class="marquee"><div class="track">
+  <span>🍫 Baked to order in Bangalore</span><span>🥚 Egg &amp; eggless on every brownie</span><span>🎁 Christmas hampers now open</span><span>🚚 Delivery across Bangalore · Courier for chocolates</span><span>✍️ Free message on every slab</span>
+  <span>🍫 Baked to order in Bangalore</span><span>🥚 Egg &amp; eggless on every brownie</span><span>🎁 Christmas hampers now open</span><span>🚚 Delivery across Bangalore · Courier for chocolates</span><span>✍️ Free message on every slab</span>
+</div></div></div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="logo">Ishi's <em>Brownies</em></a>
+  <nav class="links" id="links">
+    <a href="#shop">Shop</a><a href="#build">Build a box</a><a href="#flavours">Flavours</a><a href="#gifts">Gifts</a><a href="#reviews">Reviews</a><a href="#delivery">Delivery</a>
+  </nav>
+  <div class="nav-r">
+    <a class="admin-link" href="admin/index.html#admin" title="Owner admin panel">Admin</a>
+    <button class="basket-btn" id="openBasket" aria-label="Open basket">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span>Basket</span><b id="bCount">0</b>
+    </button>
+    <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-l">
+    <p class="eyebrow reveal">Homemade in Bangalore · Delivered across the city</p>
+    <h1 class="reveal">Brownies, baked with <em>love</em>, just for you.</h1>
+    <p class="lead reveal">Fudgy, generously topped brownies, baked fresh the day you order. Add your own message, pick egg or eggless, and we'll deliver it to your door, or courier it as a surprise.</p>
+    <div class="price-pills reveal">
+      <span><b>₹450</b> box of six</span><span><b>₹850</b> for two boxes</span><span><b>Free</b> message on slabs</span>
+    </div>
+    <div class="cta reveal">
+      <a href="#build" class="btn dark">Build your box</a>
+      <a href="#shop" class="btn ghost">Shop the bakery</a>
+    </div>
+  </div>
+  <div class="hero-r">
+    <canvas class="gl" aria-label="A plate of brownies you can drag to turn"></canvas>
+    <p class="hero-hint" aria-hidden="true"><span>↻</span> Drag to turn</p>
+    <div class="hero-chip c1"><b>Baked today</b><span>never frozen</span></div>
+    <div class="hero-chip c2"><b>Egg or eggless</b><span>on every brownie</span></div>
+    <div class="spin-stage reveal" id="spinStage">
+      <div class="spin-card" id="spinCard">
+        <div class="face front"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Stack of fudgy brownies with melted chocolate"></div>
+        <div class="face back"><img src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Happy Birthday brownie slab"></div>
+      </div>
+      <p class="drag-hint"><span>↻</span> Drag to turn</p>
+    </div>
+    <div class="float f1"><img src="https://images.unsplash.com/photo-1707248590553-29531e00bbed?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Heart brownie"></div>
+    <div class="float f2"><img src="https://images.unsplash.com/photo-1695088957420-c3b97d1f1138?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="No-bake cheesecakes"></div>
+    <div class="sticker">Egg &amp;<br>eggless</div>
+  </div>
+</section>
+
+<!-- SIX, ONE AT A TIME (3D, scroll-driven) -->
+<section class="six" id="sixbox" aria-label="How a Mix Six box is packed">
+  <div class="six-wm" aria-hidden="true">Ishi&apos;s Brownies</div>
+  <div class="six-pin">
+    <div class="six-copy">
+      <p class="eyebrow">The Mix Six</p>
+      <h2>Six brownies, <em>a bay each</em>.</h2>
+      <p class="sub left">Every box is packed by hand, one flavour at a time, so nothing gets squashed on the way to you.</p>
+      <ol class="six-list"><li><span>01</span>Classic Fudge</li><li><span>02</span>Nutella Swirl</li><li><span>03</span>Loaded Kinder</li><li><span>04</span>Biscoff Crunch</li><li><span>05</span>Birthday Special</li><li><span>06</span>Nutty Delight</li></ol>
+      <a href="#build" class="six-link">Pick your own six <span>→</span></a>
+    </div>
+    <div class="six-stage" aria-hidden="true">
+      <canvas class="gl"></canvas>
+      <img class="six-fallback" src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="t reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/></svg></span><div><b>Baked to order</b><p>Made by hand in small batches in Bangalore, never frozen.</p></div></div>
+  <div class="t reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c3.2 0 6 5 6 9.2a6 6 0 0 1-12 0c0-4.2 2.8-9.2 6-9.2Z"/></svg></span><div><b>Egg or eggless</b><p>Every brownie, slab and tin comes both ways. Just pick one.</p></div></div>
+  <div class="t reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4.5L15.5 5a2.1 2.1 0 0 1 3 3L8 18.5 4 20Z"/><path d="M13.5 7l3 3"/></svg></span><div><b>Your message on top</b><p>Names, wishes and little love notes, piped by hand for free.</p></div></div>
+  <div class="t reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h10v9H3z"/><path d="M13 10h4l3 3v3h-7"/><circle cx="7" cy="17.500" r="1.800"/><circle cx="17" cy="17.500" r="1.800"/></svg></span><div><b>Delivered your way</b><p>Bangalore delivery, self pickup, or courier for chocolates.</p></div></div>
+</section>
+
+<!-- SHOP -->
+<section class="shop" id="shop">
+  <div class="head reveal">
+    <p class="eyebrow">The bakery</p>
+    <h2>Pick your <em>treat</em></h2>
+    <p class="sub">Tap "Add" to put it in your basket. Pay by UPI or order straight on WhatsApp.</p>
+  </div>
+  <div class="tabs reveal" id="tabs">
+    <button class="on" data-c="all">Everything</button><button data-c="brownie">Brownies</button><button data-c="dessert">Desserts</button><button data-c="choco">Chocolates</button><button data-c="gift">Hampers</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<!-- BUILD A BOX -->
+<section class="build" id="build">
+  <div class="build-l reveal">
+    <p class="eyebrow light">Mix six · ₹450</p>
+    <h2>Build your <em>box</em></h2>
+    <p class="sub light">Tap flavours to fill your six bays. Mix them, repeat your favourite, or let Ishi fill the rest.</p>
+    <div class="egg-toggle" id="eggToggle"><button class="on" data-v="Egg">With egg</button><button data-v="Eggless">Eggless</button></div>
+    <div class="chips" id="chips"></div>
+    <div class="build-actions">
+      <button class="btn light-ghost" id="fillRest">Fill the rest for me</button>
+      <button class="btn light-ghost" id="clearBox">Clear</button>
+    </div>
+  </div>
+  <div class="build-r reveal">
+    <div class="box3d">
+      <div class="box-lid"><span>Ishi's <em>Brownies</em></span></div>
+      <div class="bays" id="bays"></div>
+    </div>
+    <div class="box-sum">
+      <p id="boxStatus">0 of 6 bays filled</p>
+      <div class="bar"><i id="boxBar"></i></div>
+      <button class="btn gold" id="addBox" disabled>Add box to basket · ₹450</button>
+    </div>
+  </div>
+</section>
+
+<!-- FLAVOURS (hover reveal) -->
+<section class="flavours" id="flavours">
+  <div class="head reveal">
+    <p class="eyebrow">Our flavours</p>
+    <h2>Top-down, <em>loaded</em>, never boring</h2>
+    <p class="sub">Hover (or tap) a brownie to see what's on top.</p>
+  </div>
+  <div class="fl-grid" id="flGrid"></div>
+</section>
+
+<!-- BREAK ONE OPEN (scroll-driven) -->
+<section class="bo" id="breakopen" aria-label="Inside an Ishi's brownie">
+  <div class="bo-pin">
+    <div class="bo-copies">
+      <div class="bo-copy on" data-s="0"><p class="eyebrow">The inside story</p><h2>Crackly on top. <em>Fudgy</em> all the way through.</h2><p class="sub left">Real chocolate, real butter and toppings piled high. Baked fresh in Bangalore the day you order.</p></div>
+      <div class="bo-copy" data-s="1"><p class="eyebrow">Go on, break one</p><h2>Soft, dense and <em>gooey</em> in the middle.</h2><p class="sub left">Rich enough to stay soft right through, egg or eggless, so every piece pulls apart like this.</p></div>
+      <div class="bo-copy" data-s="2"><p class="eyebrow">Your turn</p><h2>Now make a box <em>yours</em>.</h2><p class="sub left">Six brownies in any flavours you like, boxed by hand with your message.</p><div class="bo-buy"><a href="#build" class="btn dark">Build your box</a><span>₹450 · Bangalore delivery or pickup</span></div></div>
+    </div>
+    <div class="bo-visual" aria-hidden="true">
+      <canvas class="gl"></canvas>
+      <div class="bo-ring"></div>
+      <div class="bo-stage">
+        <div class="bo-goo"></div>
+        <div class="bo-strands"><i style="--t:20%;--h:7%"></i><i style="--t:41%;--h:11%"></i><i style="--t:63%;--h:6%"></i><i style="--t:77%;--h:9%"></i></div>
+        <div class="bo-half l"><img src="https://images.unsplash.com/photo-1606313564573-104197cf8f91?auto=format&amp;fit=crop&amp;w=1000&amp;q=78" alt=""></div>
+        <div class="bo-half r"><img src="https://images.unsplash.com/photo-1606313564573-104197cf8f91?auto=format&amp;fit=crop&amp;w=1000&amp;q=78" alt=""></div>
+        <div class="bo-crumbs"><i style="--x:-150px;--y:-170px;--r:140deg;--s:12px"></i><i style="--x:120px;--y:-210px;--r:-90deg;--s:9px"></i><i style="--x:-60px;--y:-250px;--r:60deg;--s:7px"></i><i style="--x:40px;--y:-120px;--r:200deg;--s:10px"></i><i style="--x:-110px;--y:150px;--r:-120deg;--s:11px"></i><i style="--x:90px;--y:210px;--r:80deg;--s:8px"></i><i style="--x:-20px;--y:260px;--r:160deg;--s:7px"></i><i style="--x:170px;--y:60px;--r:-60deg;--s:9px"></i><i style="--x:-190px;--y:20px;--r:110deg;--s:8px"></i><i style="--x:20px;--y:-30px;--r:90deg;--s:6px"></i></div>
+      </div>
+    </div>
+    <div class="bo-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    <p class="bo-hint" aria-hidden="true"><i></i>Scroll to break one open</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps" id="delivery">
+  <div class="head reveal"><p class="eyebrow">How it works</p><h2>Three easy <em>steps</em></h2></div>
+  <div class="st-grid">
+    <div class="st reveal"><b>1</b><h3>Choose</h3><p>Pick a box, slab, tin, cheesecake, chocolates or a hamper. Add your message.</p></div>
+    <div class="st reveal"><b>2</b><h3>Baked to order</h3><p>Ishi bakes it fresh, egg or eggless, the way you chose.</p></div>
+    <div class="st reveal"><b>3</b><h3>Delivered your way</h3><p>Bangalore home delivery, free self pickup, or courier for chocolates &amp; hampers.</p></div>
+  </div>
+</section>
+
+<!-- GIFTS -->
+<section class="gifts" id="gifts">
+  <div class="head reveal"><p class="eyebrow">Gifts &amp; occasions</p><h2>A sweet way to say <em>it</em></h2></div>
+  <div class="gift-grid">
+    <a href="#custom" class="g big reveal"><img src="https://images.unsplash.com/photo-1628509633348-a39defbc44c4?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Anniversary brownie slab"><span>Anniversaries &amp; love notes</span></a>
+    <a href="#custom" class="g reveal"><img src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Birthday brownie slab"><span>Birthdays</span></a>
+    <a href="#custom" class="g reveal"><img src="https://images.unsplash.com/photo-1773450970959-cef81e9b1053?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Diwali hamper"><span>Diwali &amp; festivals</span></a>
+    <a href="#custom" class="g reveal"><img src="https://images.unsplash.com/photo-1687795097254-f019f9d7fd17?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Chocolate boxes"><span>Return gifts from ₹99</span></a>
+    <a href="#custom" class="g reveal"><img src="https://images.unsplash.com/photo-1508899203029-1c9eb493c9bd?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Gold ribbon hamper"><span>Corporate hampers</span></a>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="head reveal"><p class="eyebrow">Reviews</p><h2>Loved across <em>Bangalore</em></h2></div>
+  <div class="rev-placeholder reveal">
+    <p>⭐⭐⭐⭐⭐</p>
+    <b>Your real Google &amp; Instagram reviews go here</b>
+    <span>We'll pull in genuine customer reviews and photos when your site goes live. Customers can also leave a rating after every order.</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1649773288716-4640be330759?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Decorating a brownie slab"></div>
+  <div class="about-t reveal">
+    <p class="eyebrow">About Ishi</p>
+    <h2>A home kitchen with a <em>big</em> heart</h2>
+    <p>Ishi's Brownies started as a home kitchen in Bangalore and grew one happy customer at a time, from Instagram orders to dessert stalls in the neighbourhood. Everything is still baked by hand, to order, in small batches.</p>
+    <p>Brownies, slabs and tins, no-bake cheesecakes, chocolate cake bowls, cupcakes, cake pops, customised name chocolates and festive hampers, all made with the same love.</p>
+    <div class="about-stats"><div><b>200+</b><span>creations shared</span></div><div><b>Egg &amp;</b><span>eggless always</span></div><div><b>Bulk</b><span>&amp; corporate orders</span></div></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq-sec">
+  <div class="head reveal"><p class="eyebrow">Questions</p><h2>Good to <em>know</em></h2><p class="sub">Everything about ordering, delivery and custom bakes.</p><a class="faq-cta" href="https://wa.me/919663819849" target="_blank" rel="noopener">Still curious? Ask on WhatsApp <span>→</span></a></div>
+  <div class="faq-list" id="faq"></div>
+</section>
+
+<!-- CUSTOM ORDER -->
+<section class="custom" id="custom">
+  <div class="custom-in reveal">
+    <div>
+      <p class="eyebrow light">Custom &amp; bulk orders</p>
+      <h2 class="light">Planning something <em>special?</em></h2>
+      <p class="sub light left">Birthdays, anniversaries, return gifts, corporate hampers or a dessert stall. Tell us about it and we'll reply on WhatsApp with ideas and prices.</p>
+    </div>
+    <form id="customForm">
+      <label>Occasion<select name="occasion"><option>Birthday</option><option>Anniversary</option><option>Return gifts</option><option>Corporate hampers</option><option>Festival hampers</option><option>Dessert stall / party</option></select></label>
+      <label>Date needed<input type="date" name="date" required></label>
+      <label class="full">Quantity / size<input name="qty" placeholder="e.g. 40 chocolate boxes, or 1 large slab" required></label>
+      <label class="full">Message on top / details<textarea name="msg" rows="3" placeholder="e.g. 'Happy Birthday Chinni ❤️', eggless, pink theme"></textarea></label>
+      <button class="btn gold full" type="submit">Send on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="f-top">
+    <div><a class="logo light" href="#top">Ishi's <em>Brownies</em></a><p>Homemade brownies &amp; desserts, baked to order in Bangalore.</p></div>
+    <div><b>Shop</b><a href="#build">Build a box</a><a href="#shop">Everything</a><a href="#gifts">Gifts &amp; hampers</a><a href="#custom">Custom orders</a></div>
+    <div><b>Help</b><a href="#delivery">Delivery</a><a href="#faq">FAQ</a><a href="#custom">Bulk orders</a><a href="admin/index.html#admin">Owner admin</a></div>
+    <div><b>Say hello</b><a href="https://www.instagram.com/ishis_brownies/" target="_blank" rel="noopener">Instagram @ishis_brownies</a><a href="https://wa.me/919663819849" target="_blank" rel="noopener">WhatsApp 96638 19849</a><a href="#top">Bangalore, Karnataka</a></div>
+  </div>
+  <p class="f-bot">© 2026 Ishi's Brownies · Sample website</p>
+</footer>
+
+<!-- sticky summary -->
+<div class="sticky-sum" id="stickySum"><span>🍫 Mix Six <b>₹450</b> · egg or eggless</span><a href="#build" class="btn gold sm">Build yours</a></div>
+
+<!-- basket drawer -->
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="drawer" aria-label="Basket">
+  <div class="d-head"><h3>Your basket</h3><button id="closeBasket" aria-label="Close">✕</button></div>
+  <div class="d-items" id="dItems"></div>
+  <div class="d-foot">
+    <label class="d-opt">Delivery<select id="dDel"><option value="60">Bangalore delivery · ₹60</option><option value="0">Self pickup · Free</option><option value="80">Courier (chocolates) · ₹80</option></select></label>
+    <label class="d-opt">Delivery date<input type="date" id="dDate"></label>
+    <div class="d-row"><span>Subtotal</span><b id="dSub">₹0</b></div>
+    <div class="d-row tot"><span>Total</span><b id="dTot">₹0</b></div>
+    <button class="btn dark full" id="payUpi">Pay with UPI</button>
+    <button class="btn wa full" id="orderWa">Order on WhatsApp</button>
+  </div>
+</aside>
+
+<a class="wa-float" href="https://wa.me/919663819849" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z"/></svg>
+</a>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+<script src="polish.js"></script>
+<script src="scene3d.js"></script>
+</body>
+</html>
